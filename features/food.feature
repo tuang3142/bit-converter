@@ -4,10 +4,10 @@ Feature: Food
   I want to be as objective as possible
 
   Scenario: Broccoli is gross
-    When I run `foodie portray broccoli`
+    When I run `bit portray broccoli`
     Then the output should contain "Gross!"
 
   Scenario: Tomato, or Tomato?
-    When I run `foodie pluralize --word Tomato`
+    When I run `bit pluralize --word Tomato`
     Then the output should contain "Tomatoes"
 

@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require "bit_converter/cli"
+BitConverter::CLI.start
+
+print "nothing."

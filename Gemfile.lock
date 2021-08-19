@@ -2,8 +2,8 @@ PATH
   remote: .
   specs:
     bit_converter (0.1.0)
-      activesupport (~> 4.2.0)
       httparty (~> 0.18.1)
+      thor
 
 GEM
   remote: https://rubygems.org/
@@ -93,6 +93,7 @@ PLATFORMS
   x86_64-darwin-19
 
 DEPENDENCIES
+  activesupport (~> 4.2.0)
   aruba
   bit_converter!
   cucumber
