@@ -36,5 +36,13 @@ RSpec.describe BitConverter::Convert do
         .to be_within(0.001).of 10
     end
   end
+
+  describe ".pretty_convert" do
+    it "formats output as currency", :stub_coinbase_request do
+      expect(described_class.pretty_convert(amount: 3_142,
+                                            from: "BTC", to: "USDT"))
+        .to eq "143,523,103.80"
+    end
+  end
 end
 

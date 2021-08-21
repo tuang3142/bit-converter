@@ -1,9 +1,12 @@
+# frozen_string_literal: true
+
 require "thor"
+require "money"
 require "bit_converter"
 
 module BitConverter
   class CLI < Thor
-    desc "portray ITEM", "Determines if a piece of food is gross or delicious"
+    desc "ping", "pong!"
     def ping
       puts BitConverter::Ping.ping
     end
@@ -13,6 +16,8 @@ module BitConverter
       puts BitConverter::Convert.convert(amount: amount.to_f,
                                          from: from,
                                          to: to)
+    rescue RuntimeError => e
+      puts e.message
     end
   end
 end
