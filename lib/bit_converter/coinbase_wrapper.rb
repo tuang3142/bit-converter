@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-require "httparty"
+require "net/http"
+
 module BitConverter
   class CoinbaseWrapper
     class << self
@@ -11,10 +12,10 @@ module BitConverter
       private
 
       def get_exchange_rates(coin)
-        url = "https://api.coinbase.com/v2/exchange-rates?currency=#{coin}"
-        response = HTTParty.get(url)
+        uri = URI("https://api.coinbase.com/v2/exchange-rates?currency=#{coin}")
+        response = Net::HTTP.get(uri)
 
-        JSON.parse(response.body)["data"]["rates"]
+        JSON.parse(response)["data"]["rates"]
       end
 
     end
