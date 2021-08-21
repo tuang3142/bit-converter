@@ -4,8 +4,6 @@ Feature: Convert
   I want to be able to convert coin to fiat
   and vice versa
 
-  Scenario: Convert successful
-    When I run `bit convert 10 BTC USDT`
-    Then the output should contain "456,789"
-
   Scenario: Convert unsuccessful
+    When I run `bit convert 10 FOO BAR`
+    Then the output should contain "Currencies unavailable"
