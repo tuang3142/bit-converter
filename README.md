@@ -1,12 +1,8 @@
 # BitConverter
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/bit_converter`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+A simple crypto and fiat currency converter which can also serve as a minimal portfolio tracker. Exchange rate data are from [CoinBase](https://developers.coinbase.com/api/v2).
 
 ## Installation
-
-Add this line to your application's Gemfile:
 
 ```ruby
 gem 'bit_converter'
@@ -22,7 +18,18 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+❯ bit -h
+Commands:
+  bit convert AMOUNT FROM TO  # Converts between fiat and crypto currencies
+
+❯ bit convert 1 btc usd
+48,840.005
+
+❯ bit convert 3142 doge btc
+0.020981663970713434
+```
+
 
 ## Development
 
@@ -32,34 +39,8 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/bit_converter.
+Bug reports and pull requests are welcome on GitHub at https://github.com/tuang3142/bit-converter.
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-
-# bit-converter
-
-crypto and fiat CLI converter
-
-# todo
-
-- [ ] cache data to make it faster
-- [ ] better test organize
-- [ ] one import to rule them all?
-- [ ] currency format
-- [ ] portfolio
-- [x] basic convert pairs: fiat-fait, coin-coin, coin-fait
-- [x] export as rubygem
-
-# learn
-
-- make gem
-- fully tdd
-- command line
-- wrap api call (binance, and one more)
-- design pattern
-
-- in hindsignt, should have know how to organzie files, how does rails link
-it all together without having to explicitly require
