@@ -25,6 +25,7 @@ GEM
       rspec-expectations (~> 3.4)
       thor (~> 1.0)
     builder (3.2.4)
+    byebug (11.1.3)
     childprocess (4.1.0)
     concurrent-ruby (1.1.9)
     contracts (0.16.1)
@@ -111,6 +112,7 @@ DEPENDENCIES
   activesupport (~> 4.2.0)
   aruba
   bit_converter!
+  byebug (~> 11.1, >= 11.1.3)
   cucumber
   rspec (~> 3.2)
   webmock (~> 3.14)

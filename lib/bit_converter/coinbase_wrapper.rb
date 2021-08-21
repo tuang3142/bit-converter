@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require "httparty"
-
 module BitConverter
   class CoinbaseWrapper
     class << self
@@ -30,7 +29,7 @@ module BitConverter
       def get_request(url, params = {})
         response = HTTParty.get(url, { query: params })
 
-        response.parsed_response["data"]
+        JSON.parse(response.body)["data"]
       end
     end
   end

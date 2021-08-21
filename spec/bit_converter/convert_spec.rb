@@ -5,7 +5,7 @@ RSpec.describe BitConverter::Convert do
     context "currencies are not available"
 
     it "converts coin to coin" do
-      setup_exchange_rates({ "BTC" => 1.0/45_678.90, "USDT" => 1.0 })
+      setup_exchange_rates({ "BTC" => 1.0/45_678.9, "USDT" => 1.0 })
 
       expect(described_class.convert(amount: 10, from: "BTC", to: "USDT"))
         .to be_within(0.001).of 456_789
