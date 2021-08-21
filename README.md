@@ -37,3 +37,29 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/[USERN
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+
+# bit-converter
+
+crypto and fiat CLI converter
+
+# todo
+
+- [ ] cache data to make it faster
+- [ ] better test organize
+- [ ] one import to rule them all?
+- [ ] currency format
+- [ ] portfolio
+- [x] basic convert pairs: fiat-fait, coin-coin, coin-fait
+- [x] export as rubygem
+
+# learn
+
+- make gem
+- fully tdd
+- command line
+- wrap api call (binance, and one more)
+- design pattern
+
+- in hindsignt, should have know how to organzie files, how does rails link
+it all together without having to explicitly require
