@@ -19,15 +19,22 @@ Or install it yourself as:
 ## Usage
 
 ```
-❯ bit -h
+❯ bit
 Commands:
-  bit convert AMOUNT FROM TO  # Converts between fiat and crypto currencies
+  bit convert AMOUNT FROM TO  # Converts between fiat and cypto currencies
+  bit help [COMMAND]          # Describe available commands or one specific command
+  bit ping                    # pong!
+  bit rate FROM TO            # Get exchange rate between fiat and crypto currencies
+
 
 ❯ bit convert 1 btc usd
-48,840.005
+48,915.81
 
-❯ bit convert 3142 doge btc
-0.020981663970713434
+❯ bit convert 3142 btc doge
+470,805,076.12
+
+❯ bit rate BTC JPY
+5,377,686.09
 ```
 
 
