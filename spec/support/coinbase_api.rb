@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# todo: make this a separated file
 USD_RATES = {
   "BTC"  => 1/45_678.9,
   "ETH"  => 1/3_456.7,

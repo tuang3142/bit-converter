@@ -1,9 +1,7 @@
 # frozen_string_literal: true
 
 require "bit_converter"
-require "byebug"
 require "webmock/rspec"
-
 require "support/coinbase_api"
 
 RSpec.configure do |config|
