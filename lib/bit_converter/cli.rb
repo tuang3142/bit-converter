@@ -13,5 +13,12 @@ module BitConverter
     def pluralize
       puts BitConverter::Food.pluralize(options[:word])
     end
+
+    desc "convert AMOUNT FROM TO", "Converts between fiat and cypto currencies"
+    def convert(amount, from, to)
+      puts BitConverter::Convert.convert(amount: amount.to_f,
+                                         from: from,
+                                         to: to)
+    end
   end
 end

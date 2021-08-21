@@ -1,11 +1,21 @@
 # frozen_string_literal: true
 
-# require_relative "coinbase_wrapper"
-
 module BitConverter
   class Convert
-    def self.convert(amount:, from:, to:)
-      ExchangeRate.rate(from, to) * amount
+    class << self
+      def convert(amount:, from:, to:)
+        rate_of(to.upcase) / rate_of(from.upcase) * amount
+      end
+
+      private
+
+      def rate_of(currency)
+        rates[currency].to_f
+      end
+
+      def rates
+        CoinbaseWrapper.usd_exchange_rates
+      end
     end
   end
 end
