@@ -28,16 +28,11 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.required_ruby_version = ">= 2.4.0"
-  spec.add_dependency "httparty", "~> 0.18.1"
   spec.add_dependency "thor"
-  spec.add_dependency "rake", "~> 13.0"
   spec.add_dependency "money", "~> 6.16"
   spec.add_development_dependency "rspec", "~> 3.2"
   spec.add_development_dependency "cucumber"
   spec.add_development_dependency "aruba"
   spec.add_development_dependency "webmock", "~> 3.14"
   spec.add_development_dependency "byebug", "~> 11.1", ">= 11.1.3"
-
-  # for the pluralize method in dummy test
-  spec.add_development_dependency "activesupport", "~> 4.2.0"
 end

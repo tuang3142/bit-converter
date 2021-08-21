@@ -4,3 +4,5 @@ source "https://rubygems.org"
 
 # Specify your gem's dependencies in bit_converter.gemspec
 gemspec
+
+gem "rake", "~> 13.0"
