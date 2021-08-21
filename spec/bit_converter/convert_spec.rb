@@ -2,7 +2,15 @@
 
 RSpec.describe BitConverter::Convert do
   describe ".convert", :stub_coinbase_request do
-    context "currencies are not available"
+    context "currencies are not available" do
+      it "raises error" do
+        expect { described_class.convert(amount: 1, from: "FOO", to: "BTC") }
+          .to raise_error("Currencies FOO unavailable")
+
+        expect { described_class.convert(amount: 1, from: "BTC", to: "BAR") }
+          .to raise_error("Currencies BAR unavailable")
+      end
+    end
 
     it "converts coin to coin" do
       expect(described_class.convert(amount: 10, from: "BTC", to: "USDT"))

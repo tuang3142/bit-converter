@@ -1,15 +1,7 @@
 # frozen_string_literal: true
 
-RSpec.describe BitConverter::Food do
+RSpec.describe BitConverter::Ping do
   it "broccoli is gross" do
-    expect(described_class.portray("Broccoli")).to eql("Gross!")
-  end
-
-  it "anything else is delicious" do
-    expect(described_class.portray("Not Broccoli")).to eql("Delicious!")
-  end
-
-  it "pluralizes a word" do
-    expect(described_class.pluralize("Tomato")).to eql("Tomatoes")
+    expect(described_class.ping).to eql("pong!")
   end
 end

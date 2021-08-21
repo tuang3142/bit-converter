@@ -10,6 +10,8 @@ module BitConverter
       private
 
       def rate_of(currency)
+        raise "Currencies #{currency} unavailable" if rates[currency].nil?
+
         rates[currency].to_f
       end
 
