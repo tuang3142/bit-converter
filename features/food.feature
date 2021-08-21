@@ -10,4 +10,3 @@ Feature: Food
   Scenario: Tomato, or Tomato?
     When I run `bit pluralize --word Tomato`
     Then the output should contain "Tomatoes"
-

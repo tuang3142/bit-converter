@@ -5,3 +5,4 @@ RSpec.describe BitConverter do
     expect(BitConverter::VERSION).not_to be nil
   end
 end
+

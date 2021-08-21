@@ -4,6 +4,7 @@ PATH
     bit_converter (0.1.0)
       httparty (~> 0.18.1)
       money (~> 6.16)
+      rake (~> 13.0)
       thor
 
 GEM
@@ -100,7 +101,6 @@ DEPENDENCIES
   aruba
   bit_converter!
   cucumber
-  rake (~> 13.0)
   rspec (~> 3.2)
 
 BUNDLED WITH

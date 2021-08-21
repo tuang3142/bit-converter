@@ -5,7 +5,7 @@ require "active_support/inflector"
 module BitConverter
   class Food
     def self.portray(food)
-      if food == "Broccoli"
+      if food.downcase == "broccoli"
         "Gross!"
       else
         "Delicious!"
